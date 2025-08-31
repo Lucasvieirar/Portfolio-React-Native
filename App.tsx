@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView,Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView,Image, TextInput, Button } from 'react-native';
 import appStyle from './style/appStyle';
 
 import HeaderTittle from './compomentes/headerTittle';
+import TabNavegation from './compomentes/tabNavegation';
 export default function App() {
   return (
     <View style={appStyle.background}>
@@ -21,8 +22,21 @@ export default function App() {
             <Text style={appStyle.textBold}>Conceitos: </Text>Estruturas de Dados, Programação Orientada a Objetos (POO), Redes de Computadores, Algoritmos de Machine Learning e Deep Learning{"\n"}
           </Text>
         </View>
+        <View style={appStyle.formCaixa}>
+          <Text style={appStyle.formText}>Contato</Text>
+          <TextInput style={appStyle.formInput} placeholder="Seu nome"/>
+          <TextInput style={appStyle.formInputMsg}  placeholder="Sua mensagem"/>
+          <Button  title='Enviar' />
+        </View>
+        
+
       </ScrollView>
+      <View>
+    <TabNavegation/>
     </View>
+    
+    </View>
+    
   );
 }
 // npx create-expo-app@latest portifolio -t expo-template-blank-typescript

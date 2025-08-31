@@ -10,7 +10,7 @@ export default function HeaderTittle() {
     </View>
 
     <View style={headerTittle.headerInfo}>
-            <Text style={headerTittle.headerInfoText}>Olá, me chamo Lucas Vieira Riberio</Text>
+            <Text style={headerTittle.headerInfoText}>Olá, me chamo Lucas Vieira Ribeiro</Text>
           </View>
     </ScrollView>
     </View>

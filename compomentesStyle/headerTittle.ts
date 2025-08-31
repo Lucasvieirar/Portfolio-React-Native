@@ -15,7 +15,7 @@ export default StyleSheet.create({
 
   },
   headerContent: {
-    flexDirection: "row",
+    
     alignContent: "center",
     marginTop: 25,
 
@@ -25,6 +25,7 @@ export default StyleSheet.create({
     fontSize: 26,
     fontWeight: "bold",
     color: "white",
+    textAlign: "center",
     
   },
   headerInfo: {
