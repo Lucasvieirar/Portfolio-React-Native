@@ -3,14 +3,16 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import  headerTittle  from "../compomentesStyle/headerTittle";
 export default function HeaderTittle() {
   return (
-    <ScrollView style={headerTittle.headerView} stickyHeaderHiddenOnScroll={true}>
+    <View style={headerTittle.headerView}>
+    <ScrollView  stickyHeaderHiddenOnScroll={true}>
     <View style={headerTittle.headerContent}>
-        <Text>Sobre Mim</Text>    
+        <Text style={headerTittle.headerText}>Sobre Mim</Text>    
     </View>
 
     <View style={headerTittle.headerInfo}>
-            <Text style={headerTittle.headerInfoText}>Olá, me chamo Lucas Vieira Riberio, curso Ciência da Computação</Text>
+            <Text style={headerTittle.headerInfoText}>Olá, me chamo Lucas Vieira Riberio</Text>
           </View>
     </ScrollView>
+    </View>
   );
 }
