@@ -1,10 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView,Image, TextInput, Button } from 'react-native';
+import {  Text, View, ScrollView,Image, TextInput, Button, Alert } from 'react-native';
 import appStyle from './style/appStyle';
 
 import HeaderTittle from './compomentes/headerTittle';
 import TabNavegation from './compomentes/tabNavegation';
+import { useState } from 'react';
 export default function App() {
+
+  const [name, setName] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
+
+  const handleSubmit = () => {
+    if (!name || !message){
+      Alert.alert("Preencha todos os campos");
+      return;
+    }
+    setFormSubmitted(true);
+    Alert.alert("Formulário enviado com sucesso");
+
+  };
+
+
   return (
     <View style={appStyle.background}>
       <HeaderTittle/>
@@ -24,9 +40,10 @@ export default function App() {
         </View>
         <View style={appStyle.formCaixa}>
           <Text style={appStyle.formText}>Contato</Text>
-          <TextInput style={appStyle.formInput} placeholder="Seu nome"/>
-          <TextInput style={appStyle.formInputMsg}  placeholder="Sua mensagem"/>
-          <Button  title='Enviar' />
+          <TextInput style={appStyle.formInput} placeholder="Seu nome" value={name} onChangeText={setName}/>
+          <TextInput style={appStyle.formInputMsg}  placeholder="Sua mensagem" value={message} onChangeText={setMessage}/>
+          <Button  title='Enviar' onPress={handleSubmit}/>
+          {formSubmitted && <Text style={appStyle.retorno}>Formulario enviado</Text>}
         </View>
         
 

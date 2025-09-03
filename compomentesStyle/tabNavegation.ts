@@ -25,6 +25,7 @@ export default StyleSheet.create({
   },
   tabText:{
     color: "white",
+    fontWeight: "bold",
 
   },
 });

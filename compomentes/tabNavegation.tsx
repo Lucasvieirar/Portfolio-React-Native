@@ -6,7 +6,7 @@ export default function TabNavegation() {
     <ScrollView stickyHeaderHiddenOnScroll={true}>
     <View style={tabNavegation.tabNavegation}>
     <TouchableOpacity style={tabNavegation.tabButton} >
-      <Text style={tabNavegation.tabText}>Sobre Min</Text>
+      <Text style={tabNavegation.tabText}>Sobre Mim</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={tabNavegation.tabButton} >
