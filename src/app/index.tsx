@@ -4,7 +4,7 @@ import appStyle from './style/appStyle';
 import HeaderTittle from './compomentes/headerTittle';
 import TabNavegation from './compomentes/tabNavegation';
 import { useState } from 'react';
-export default function App() {
+export default function SobreMim() {
 
   const [name, setName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
