@@ -26,7 +26,7 @@ export default function App() {
     <View style={appStyle.background}>
       <HeaderTittle/>
       <ScrollView style={appStyle.background}>
-        <Image style={appStyle.foto} source={require("../../assets/foto.png")}/>
+        <Image style={appStyle.foto} source={require("../assets/foto.png")}/>
         <View style={appStyle.viewText}>
           <Text style={appStyle.text}>
             Sou proativo, gosto de desafios e tenho um forte interesse em pesquisa e desenvolvimento. {"\n"}
@@ -57,5 +57,5 @@ export default function App() {
     
   );
 }
-// npx create-expo-app@latest portifolio -t expo-template-blank-typescript
+
 
